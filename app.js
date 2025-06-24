@@ -4,6 +4,12 @@ const express = require('express');
 const cors = require('cors');     
 const app = express();
 
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+// Enable CORS for specific origins and methods
+// Adjust the origins as needed
+
 app.use(cors({
   credentials: true, // Allow credentials
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
